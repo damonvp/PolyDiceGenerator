@@ -31,22 +31,24 @@ underscore_font="Neutron:style=Bold";
 symbol_font="yar";
 
 /* [Dice to Draw] */
-d2=true;
-d3=true;
-d4=true;
-d4c=true;
-d4i=true;
-d4p=true;
-d6=true;
-d8=true;
-d10=true;
-d00=true;
-d12=true;
-d12r=true;
-d16=true;
-d20=true;
-d24=true;
-d30=true;
+d2=false;
+d3=false;
+d4=false;
+d4c=false;
+d4i=false;
+d4p=false;
+d6=false;
+d6r=false;
+d8=false;
+d10=false;
+d00=false;
+d12=false;
+d12r=false;
+d16=false;
+d20=false;
+d24=false;
+d30=false;
+d48=false;
 
 /* [Dice Size] */
 d2_size=24;
@@ -56,6 +58,7 @@ d4c_size=13;
 d4i_size=14;
 d4p_size=14;
 d6_size=15;
+d6r_size=15;
 d8_size=15;
 d10_size=16;
 d00_size=16;
@@ -65,6 +68,7 @@ d16_size=16;
 d20_size=20;
 d24_size=24;
 d30_size=30;
+d48_size=35;
 
 /* [Depth, Stroke, and Bumpers] */
 text_depth=0.6;
@@ -223,6 +227,36 @@ d6_adj_size=[0,0,0,0,0,0];
 d6_adj_v_push=[0,0,0,0,0,0];
 d6_adj_h_push=[0,0,0,0,0,0];
 d6_adj_depth=[0,0,0,0,0,0];
+
+/* [d6 Rhombic] */
+d6r_text_size=62;
+d6r_text_v_push=0;
+d6r_text_h_push=0;
+d6r_text_spacing=1; //[0.5:0.02:1.5]
+d6r_num_4_h_push=-3;
+d6r_angle_text=false; //angle d6 text
+d6r_text=["1","2","4","5","6","3"];
+d6r_symbols=[undef,undef,undef,undef,undef,undef];
+d6r_symbol_size=62;
+d6r_symbol_v_push=0;
+d6r_symbol_h_push=0;
+d6r_underscores=[" "," "," "," ","_"," "];
+d6r_underscore_size=48;
+d6r_underscore_v_push=-32;
+d6r_underscore_h_push=0;
+d6r_bumpers=[false,true,true,false,false,true];
+d6r_rotate=[0,0,0,0,0,0];
+d6r_pips=[" "," "," "," "," "," "];
+d6r_pip_sides=6; //[0,3,4,5,6,8,10,12]
+d6r_pip_size=20;
+d6r_pip_offset=2.5;
+d6r_pip_symbol_pos=["1","2","4","5","6","3"];
+d6r_pip_symbols=[undef,undef,undef,undef,undef,undef]; //symbols for pips
+d6r_pip_symbol_rotate=[0,0,0,0,0,0];
+d6r_adj_size=[0,0,0,0,0,0];
+d6r_adj_v_push=[0,0,0,0,0,0];
+d6r_adj_h_push=[0,0,0,0,0,0];
+d6r_adj_depth=[0,0,0,0,0,0];
 
 /* [d8 Octahedron] */
 d8_text_size=55;
@@ -433,6 +467,29 @@ d30_adj_h_push=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 d30_adj_spacing=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 d30_adj_depth=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
+/* [d48 Disdyakis Dodecahedron] */
+d48_text_size=13;
+d48_text_v_push=0;
+d48_text_h_push=0;
+d48_text_spacing=1; //[0.5:0.02:1.5]
+d48_num_4_h_push=-3;
+d48_text=["8","33","47","10","11","24","46","17","5","30","36","21",".6.","23","37","20","45", "2","1","28","34","7","40","23","12","26","29", "42",".9.","21","44","19","15","3","32","31","48","4","13","43","38","14","41","2","22","16","25","39"];
+d48_symbols=[undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef,undef];
+d48_symbol_size=20;
+d48_symbol_v_push=0;
+d48_symbol_h_push=0;
+d48_underscores=[" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "];
+d48_underscore_size=18;
+d48_underscore_v_push=-10;
+d48_underscore_h_push=0;
+d48_bumpers=[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
+d48_rotate=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+d48_adj_size=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+d48_adj_v_push=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+d48_adj_h_push=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+d48_adj_spacing=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+d48_adj_depth=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
 /* [Please Support PolyDiceGenerator] */
 Go_to="https://ko-fi.com/charmaur";
 
@@ -449,6 +506,7 @@ if(d4c) move([-spacing,-spacing]) drawd4c();
 if(d4i) move([spacing,-spacing*2]) drawd4i();
 if(d4p) fwd(spacing*2) drawd4p();
 if(d6) drawd6();
+if(d6r) move([-spacing*2,-spacing*2]) drawd6r();
 if(d8) back(spacing) drawd8();
 if(d10) move([-spacing,spacing]) drawd10();
 if(d00) left(spacing) drawd00();
@@ -457,7 +515,8 @@ if(d12r) back(spacing*2) drawd12r();
 if(d16) move([-spacing*2,spacing]) drawd16();
 if(d20) right(spacing) drawd20();
 if(d24) move([spacing,spacing*2]) drawd24();
-if(d30) move([-spacing,spacing*2]) drawd30();
+if(d30) move([-spacing*2,-spacing])drawd30();
+if(d48) move([-spacing*2,spacing*2]) drawd48();
 
 txt_font=str_strip(text_font,"\"");
 under_font=str_strip(underscore_font,"\"");
@@ -935,6 +994,95 @@ module drawd6(){
         regular_polyhedron("cube",side=d6_size,anchor=BOTTOM,draw=false)
         zrot(d6_rotate[$faceindex]+base_rotate[$faceindex])
         drwapipsymbols("d6",d6_pip_symbol_pos[$faceindex],d6_pip_symbols[$faceindex],d6_pip_symbol_rotate[$faceindex],d6_adj_depth[$faceindex]);
+    }
+}
+
+module drawd6r(){
+    txt_merged=merge_txt(d6r_text,fix_quotes(d6r_symbols));
+    txt_mult=d6r_text_size*d6r_size/100;
+    adj_txt=adj_list(d6r_adj_size,d6r_size/100);
+    txt_stroke=text_stroke*txt_mult;
+    sym_mult=d6r_symbol_size*d6r_size/100;
+    sym_stroke=symbol_stroke*sym_mult;
+    bumpers=fix_quotes(d6r_bumpers);
+    under_mult=d6r_underscore_size*d6r_size/100;
+    space_mult=d6r_text_spacing>1 ? (d6r_text_spacing-1)*txt_mult/3.15 : d6r_text_spacing<1 ? (-1+d6r_text_spacing)*txt_mult/2.8 : 0;
+    rotate_mod=d6r_angle_text ? 45 : 0;
+    //d6r_text=["1","2","4","5","6","3"];
+    base_rotate=[0,-90,90,180,-90,0];
+    d6r_pip_fn=d6r_pip_sides==0 ? 128 : d6r_pip_sides;
+    circumsphere_dia=d6r_size*sqrt(3);
+    corner_round_mult=circumsphere_dia-(corner_rounding*circumsphere_dia/100)/1.8;
+    dual_mult=d6r_size*(3*sqrt(2)/2);
+    corner_clip_mult=dual_mult-(corner_clipping*dual_mult/100)/1.8;
+    
+    difference()
+    {
+        if(add_bumpers && edge_rounding==0 && corner_rounding==0 && corner_clipping==0)
+            //render bumpers
+            union()
+            {
+                skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM);
+                skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,rotate_children=false,draw=false)
+                if(bumpers[$faceindex]) stroke($face,width=bumper_size,closed=true);
+            }
+        else if(edge_rounding==0 && (corner_rounding>0 || corner_clipping>0))
+            //render clipping objects
+            intersection()
+            {
+                skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM);
+                if(corner_rounding>0)
+                    translate([0,0,d6r_size/2])
+                    sphere(d=corner_round_mult);
+                else if(corner_clipping>0)
+                    translate([0,0,d6r_size/2])
+                    skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("octahedron",side=corner_clip_mult,facedown=false);
+            }
+        else
+            //render cube
+            skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,rounding=edge_rounding);
+        
+        //render numbers & symbols
+        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex]+rotate_mod)
+        down(text_depth+d6r_adj_depth[$faceindex])
+        linear_extrude(height=2*text_depth+d6r_adj_depth[$faceindex])
+        move([(d6r_text_h_push+d6r_adj_h_push[$faceindex])*d6r_size/100,(d6r_text_v_push+d6r_adj_v_push[$faceindex])*d6r_size/100])
+        if(is_list(txt_merged[$faceindex])) //a symbol
+            move([d6r_symbol_h_push*d6r_size/100,d6r_symbol_v_push*d6r_size/100])
+            offset(delta=sym_stroke)
+            text(txt_merged[$faceindex][0],size=sym_mult,font=sym_font,halign="center",valign="center");
+        else if(txt_merged[$faceindex]=="4") //a number 4
+            right(d6r_num_4_h_push*d6r_size/100)
+            offset(delta=txt_stroke)
+            text(txt_merged[$faceindex],size=txt_mult+adj_txt[$faceindex],font=txt_font,halign="center",valign="center");
+        else if(len(txt_merged[$faceindex])==1) //a single digit number that's not 4
+            offset(delta=txt_stroke)
+            text(txt_merged[$faceindex],size=txt_mult+adj_txt[$faceindex],font=txt_font,halign="center",valign="center");
+        else //a double digit number
+            right(space_mult)
+            offset(delta=txt_stroke)
+            text(txt_merged[$faceindex],size=txt_mult+adj_txt[$faceindex],font=txt_font,spacing=d6r_text_spacing,halign="center",valign="center");
+        
+        //render underscore
+        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex]+rotate_mod)
+        down(text_depth+d6r_adj_depth[$faceindex])
+        linear_extrude(height=2*text_depth+d6r_adj_depth[$faceindex])
+        move([d6r_underscore_h_push*d6r_size/100,d6r_underscore_v_push*d6r_size/100])
+        offset(delta=txt_stroke)
+        text(d6r_underscores[$faceindex],size=under_mult,font=under_font,halign="center",valign="center");
+        
+        //render pips
+        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex])
+        drwapips("d6r",d6r_pips[$faceindex],d6r_adj_depth[$faceindex],d6r_pip_fn);
+        
+        //render pip symbols
+        d6r_pip_symbols=fix_quotes(d6r_pip_symbols);
+        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex])
+        drwapipsymbols("d6r",d6r_pip_symbol_pos[$faceindex],d6r_pip_symbols[$faceindex],d6r_pip_symbol_rotate[$faceindex],d6r_adj_depth[$faceindex]);
     }
 }
 
@@ -1624,6 +1772,85 @@ module drawd30(){
         move([d30_underscore_h_push*d30_size/100,d30_underscore_v_push*d30_size/100])
         offset(delta=txt_stroke)
         text(d30_underscores[$faceindex],size=under_mult,font=under_font,halign="center",valign="center");
+    }
+}		
+
+module drawd48(){
+    txt_merged=merge_txt(d48_text,fix_quotes(d48_symbols));
+    txt_mult=d48_text_size*d48_size/100;
+    adj_txt=adj_list(d48_adj_size,d48_size/100);
+    txt_stroke=text_stroke*txt_mult;
+    sym_mult=d48_symbol_size*d48_size/100;
+    sym_stroke=symbol_stroke*sym_mult;
+    bumpers=fix_quotes(d48_bumpers);
+    under_mult=d48_underscore_size*d48_size/100;
+    space_mult=d48_text_spacing>1 ? (d48_text_spacing-1)*txt_mult/3.15 : d48_text_spacing<1 ? (-1+d48_text_spacing)*txt_mult/2.8 : 0;
+    base_rotate=[0,0,0,0,0,0,0,0,0,0
+    ,0,0,0,0,0,0,-145,142,142,-145
+    ,-142,142,142,-145,125,-125,-125,125,0,0
+    ,-125,125,-125,125,-125,125,0,0,-145,145
+    ,145,-145,145,-145,145,-145,-142,142];
+    circumsphere_dia=d48_size*(1/sqrt(2))*2;
+    corner_round_mult=circumsphere_dia-(corner_rounding*circumsphere_dia/100)/2;
+    corner_clip_mult=circumsphere_dia/2-(corner_clipping*circumsphere_dia/100/2)/2;
+    
+    difference()
+    {
+        if(add_bumpers && edge_rounding==0 && corner_rounding==0 && corner_clipping==0)
+            //render bumpers
+            union()
+            {
+                regular_polyhedron("disdyakis dodecahedron",ir=d48_size/2,anchor=BOTTOM);
+                regular_polyhedron("disdyakis dodecahedron",ir=d48_size/2,anchor=BOTTOM,rotate_children=false,draw=false)
+                if(bumpers[$faceindex]) stroke($face,width=bumper_size,closed=true);
+            }
+        else if(edge_rounding==0 && (corner_rounding>0 || corner_clipping>0))
+            //render clipping objects
+            intersection()
+            {
+                regular_polyhedron("disdyakis dodecahedron",ir=d48_size/2,anchor=BOTTOM);
+                if(corner_rounding>0)
+                    translate([0,0,d48_size/2])
+                    sphere(d=corner_round_mult);
+                else if(corner_clipping>0)
+                    translate([0,0,d48_size/2])
+                    rotate([0,45,0])
+                    regular_polyhedron("cuboctahedron",ir=corner_clip_mult);
+            }
+        else
+            //render dodecahedron
+            regular_polyhedron("disdyakis dodecahedron",ir=d48_size/2,anchor=BOTTOM,rounding=edge_rounding);
+
+        //render numbers & symbols
+        regular_polyhedron("disdyakis dodecahedron",ir=d48_size/2,anchor=BOTTOM,draw=false)
+        zrot(d48_rotate[$faceindex]+base_rotate[$faceindex])
+        down(text_depth+d48_adj_depth[$faceindex])
+        linear_extrude(height=2*text_depth+d48_adj_depth[$faceindex])
+        move([(d48_text_h_push+d48_adj_h_push[$faceindex])*d48_size/100,(d48_text_v_push+d48_adj_v_push[$faceindex])*d48_size/100])
+        if(is_list(txt_merged[$faceindex])) //a symbol
+            move([d48_symbol_h_push*d48_size/100,d48_symbol_v_push*d48_size/100])
+            offset(delta=sym_stroke)
+            text(txt_merged[$faceindex][0],size=sym_mult,font=sym_font,halign="center",valign="center");
+        else if(txt_merged[$faceindex]=="4") //a number 4
+            right(d48_num_4_h_push*d48_size/100)
+            offset(delta=txt_stroke)
+            text(txt_merged[$faceindex],size=txt_mult+adj_txt[$faceindex],font=txt_font,halign="center",valign="center");
+        else if(len(txt_merged[$faceindex])==1) //a single digit number that's not 4
+            offset(delta=txt_stroke)
+            text(txt_merged[$faceindex],size=txt_mult+adj_txt[$faceindex],font=txt_font,halign="center",valign="center");
+        else //a double digit number
+            right(space_mult)
+            offset(delta=txt_stroke)
+            text(txt_merged[$faceindex],size=txt_mult+adj_txt[$faceindex],font=txt_font,spacing=d48_text_spacing+d48_adj_spacing[$faceindex],halign="center",valign="center");
+      
+        //render underscore
+        regular_polyhedron("disdyakis dodecahedron",ir=d48_size/2,anchor=BOTTOM,draw=false)
+        zrot(d48_rotate[$faceindex]+base_rotate[$faceindex])
+        down(text_depth+d48_adj_depth[$faceindex])
+        linear_extrude(height=2*text_depth+d48_adj_depth[$faceindex])
+        move([d48_underscore_h_push*d48_size/100,d48_underscore_v_push*d48_size/100])
+        offset(delta=txt_stroke)
+        text(d48_underscores[$faceindex],size=under_mult,font=under_font,halign="center",valign="center");
     }
 }		
 		
