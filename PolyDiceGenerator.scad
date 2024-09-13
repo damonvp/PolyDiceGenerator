@@ -1022,28 +1022,28 @@ module drawd6r(){
             //render bumpers
             union()
             {
-                skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM);
-                skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,rotate_children=false,draw=false)
+                skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM);
+                skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,rotate_children=false,draw=false)
                 if(bumpers[$faceindex]) stroke($face,width=bumper_size,closed=true);
             }
         else if(edge_rounding==0 && (corner_rounding>0 || corner_clipping>0))
             //render clipping objects
             intersection()
             {
-                skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM);
+                skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM);
                 if(corner_rounding>0)
                     translate([0,0,d6r_size/2])
                     sphere(d=corner_round_mult);
                 else if(corner_clipping>0)
                     translate([0,0,d6r_size/2])
-                    skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("octahedron",side=corner_clip_mult,facedown=false);
+                    skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("octahedron",side=corner_clip_mult,facedown=false);
             }
         else
             //render cube
-            skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,rounding=edge_rounding);
+            skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,rounding=edge_rounding);
         
         //render numbers & symbols
-        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
         zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex]+rotate_mod)
         down(text_depth+d6r_adj_depth[$faceindex])
         linear_extrude(height=2*text_depth+d6r_adj_depth[$faceindex])
@@ -1065,7 +1065,7 @@ module drawd6r(){
             text(txt_merged[$faceindex],size=txt_mult+adj_txt[$faceindex],font=txt_font,spacing=d6r_text_spacing,halign="center",valign="center");
         
         //render underscore
-        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
         zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex]+rotate_mod)
         down(text_depth+d6r_adj_depth[$faceindex])
         linear_extrude(height=2*text_depth+d6r_adj_depth[$faceindex])
@@ -1074,13 +1074,13 @@ module drawd6r(){
         text(d6r_underscores[$faceindex],size=under_mult,font=under_font,halign="center",valign="center");
         
         //render pips
-        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
         zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex])
         drwapips("d6r",d6r_pips[$faceindex],d6r_adj_depth[$faceindex],d6r_pip_fn);
         
         //render pip symbols
         d6r_pip_symbols=fix_quotes(d6r_pip_symbols);
-        skew(sxz=0.5,syz=0.5)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
+        skew(sxz=0.5,syz=0.25)frame_map(x=[0,0,0], y=[1,1.5,0]) regular_polyhedron("cube",side=d6r_size,anchor=BOTTOM,draw=false)
         zrot(d6r_rotate[$faceindex]+base_rotate[$faceindex])
         drwapipsymbols("d6r",d6r_pip_symbol_pos[$faceindex],d6r_pip_symbols[$faceindex],d6r_pip_symbol_rotate[$faceindex],d6r_adj_depth[$faceindex]);
     }
