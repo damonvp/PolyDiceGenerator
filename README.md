@@ -2,7 +2,7 @@
 
 A customizable **Polyhedral Dice Generator** for OpenSCAD.
 
-![Image of dice](images/dice.png)
+![Image of dice](images/dice2.png)
 
 ## Requirements
 
